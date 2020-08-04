@@ -1,0 +1,106 @@
+
+/* Selects every element: */
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(240, 164, 255);
+
+}
+
+body {
+    background-color: black;
+}
+
+/* Everything is centered with some spacing: */
+.container {
+    text-align: center;
+    padding: 10px;
+}
+
+
+#header {
+    background-color: rgb(115, 2, 221);
+}
+
+/* Removes spacing from the main div: */
+.main {
+    padding: 0;
+    margin: 0;
+}
+
+/* Centers the form: */
+.mainFormFieldset{
+    margin-right: auto;
+    border: none;
+}
+
+/* Removes bullet points and indenting from the unordered lists: */
+.mainFormList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Adjusts the input field sizes and removes the border lines except from bottom: */
+.mainFormInput {
+    background-color: black;
+    font-size: medium;
+    outline: none;
+    border-width: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(154, 106, 163);
+    width: 300px;
+    padding-top: 6px;
+
+}
+
+/* Changes the bottom border color when an input is focused: */
+.mainFormInput:focus {
+    border-color: rgb(240, 164, 255);
+
+}
+
+/* Positions the show/hide password eye icon to the left side of the password input field: */
+.mainFormImg{
+    width: 25px;
+    position: absolute;
+    margin-left: 280px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Adds some spacing between the header and the first input: */
+#firstNameInput {
+    padding-top: 20px;
+}
+
+/* Changes the color of all placeholders: */
+::placeholder { 
+    color: rgba(240, 164, 255, 0.514);
+}
+
+/* Adds some spacing between the input fields and the output fields, changes the font and the color of the output fields: */
+.mainFormOutput {
+    color: rgb(155, 80, 240);
+    padding: 10px;
+    font-size: 10px;
+}
+
+/* Configures the two button classes: when the hover is disabled and when it's enabled: */
+.mainFormButtonHoverDisabled, .mainFormButtonHoverEnabled {
+    width: 200px;
+    height: 55px;
+    outline: none;
+    background-color: black;
+    color: rgb(154, 106, 163);
+    border: solid 1px rgb(154, 106, 163);
+    border-radius: 12px;
+}
+
+/* Hover configuration for the class mainFormButtonHoverEnabled: */
+.mainFormButtonHoverEnabled:hover {
+    box-shadow: none;
+    color: rgb(240, 164, 255);
+    border-color: rgb(240, 164, 255);
+}

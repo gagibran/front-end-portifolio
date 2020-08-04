@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!-- Ideas for the project:
+    1. What is the purpose of the form? Give it some thought, look through other forms over the internet. Think about its look and its general purpose. Is it gonna be a service form? An
+    order form? A form form submitting a recipe online? Chosen: a sing up form for an online game;
+
+    2. Build up a template. It's a good idea to have one for different thing to avoid building stuff from scratch;
+
+    3. Save regularly and test regularly: don't write too much code before testing, for this could make debugging more difficult.
+-->
+
+<!-- 
+    Guidelines and Instructions:
+
+    You must create a form with 7 or more inputs of types you choose. We have studied a variety of input types, such as text, radio, checkbox, etc. You should decide a purpose for your form and design it to meet these requirements. The form may have any purpose you like. Examples include customer service form, food order form, product purchase, survey, contact form, etc.
+
+    Your final submission must include the following:
+        Include a 3-5 sentence description of the form’s purpose. Explain why you chose it and any details you care to mention.
+        Include working HTML, CSS, at least one image, and JavaScript validation. For the purposes of this assignment, you may use either an internal or external stylesheet, even though external is typically preferred. If you use an external stylesheet or any other external files, you must upload them all and name in your documentation (see below) all of the files used to make the project work.
+        Include any documentation that a reviewer should have in order to understand, test and evaluate the work you have submitted.
+        Your form should have 7 or more inputs that represent at least 3 of the types we have studied. Do not use the type submit button.
+        Inputs must have some sort of validation, including at least two JavaScript functions. Validation should occur on events such as onclick or onblur.
+        A minimum of 3 separate CSS classes or IDs are used in some way.
+        Use both HTML and JavaScript comments to document your work throughout your submission.
+        Students may use course sample files for ideas, but do not submit course files as your project.
+-->
+
+
+<html lang="en-US">
+    <head>
+        <!-- Meta data: -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Final project of the course">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Forms, Validation, Regular Expression, regex, Fields">
+        <meta name="author" content="Gabriel Gibran">
+        <title>Online Game Form</title>
+        <link rel="stylesheet" href="form_style.css">
+        <script src="form_script.js"></script>
+    </head>
+    <body>
+        <div class="container" id="header">
+            <h1 class="headerHeadingOne" id="pageTitle">Place Holder Online</h1>
+        </div>
+        <div class="container" id="main">
+            <h2 class="mainHeadingTwo" id="subtitle">Sign up and venture yourself through the mysteries and tales of Place Holder Online!</h2>
+            <form class="mainForm" id="gameForm" name="signUpForm" method="POST" action="#">
+                <fieldset class="mainFormFieldset" id="gameFieldset">
+                    <ul class="mainFormList" id="firstNameList">
+                        <li class="mainFormListElement" id="firstNameInputItem"><input class="mainFormInput" id="firstNameInput" name="firstName" type="text" placeholder="First Name*" onblur="validateFirstName()"></li>
+                        <li class="mainFormListElement" id="firstNameOutputItem"><span class="mainFormOutput" id="firstNameOutput"></span></li>
+                        <br>
+                    </ul>
+                    <ul class="mainFormList" id="lastNameList">
+                        <li class="mainFormListElement" id="lastNameInputItem"><input class="mainFormInput" id="lastNameInput" name="lastName" type="text" placeholder="Last name*"  onblur="validateLastName()"></li>
+                        <li class="mainFormListElement" id="lastNameOutputItem"><span class="mainFormOutput" id="lastNameOutput"></span></li>
+                        <br>
+                    </ul>
+                    <ul class="mainFormList" id="emailList">
+                        <li class="mainFormListElement" id="emailInputItem"><input class="mainFormInput" id="emailInput" name="email" type="email" placeholder="E-mail address*" onblur="validateEmail()"></li>
+                        <li class="mainFormListElement" id="emailOutputItem"><span class="mainFormOutput" id="emailOutput"></span></li>
+                        <br>
+                    </ul>
+                    </ul>
+                    <ul class="mainFormList" id="usernameList">
+                        <li class="mainFormListElement" id="usernameInputItem"><input class="mainFormInput" id="usernameInput" name="username" type="text" placeholder="Username*" onblur="validateUsername();"></li>
+                        <li class="mainFormListElement" id="usernameOutputItem"><span class="mainFormOutput" id="usernameOutput"></span></li>
+                        <br>
+                    </ul>
+                    <ul class="mainFormList" id="passwordList">
+                        <li class="mainFormListElement" id="passwordInputItem"><img class="mainFormImg" id="showPasswordImg" src="https://img.icons8.com/nolan/64/eye-unchecked.png" alt="hide password" onclick="toggleShowPassword();"><input class="mainFormInput" id="passwordInput" name="password" type="password" placeholder="Password*" onblur="validatePassword();"></li>
+                        <li class="mainFormListElement" id="passwordOutputItem"><span class="mainFormOutput" id="passwordOutput"></span></li>
+                        <br>
+                    </ul>
+                    <ul class="mainFormList" id="repeatedPasswordList">
+                        <li class="mainFormListElement" id="repeatedPasswordInputItem"><input class="mainFormInput" id="repeatedPasswordInput" name="repeatedPassword" type="password" placeholder="Repeat password" onblur="validateRepeatedPassword();"></li>
+                        <li class="mainFormListElement" id="repeatedPasswordOutputItem"><span class="mainFormOutput" id="repeatedPasswordOutput"></span></li>
+                        <br>
+                    </ul>
+                    <ul class="mainFormList" id="buttonList">
+                        <input class="mainFormButtonHoverDisabled" id="submitButton" type="button" value="Create account" onmouseover="validateForm();">
+                    </ul>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
