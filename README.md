@@ -1,5 +1,5 @@
 # Friday Night Softwares
-## Welcome to the website for my soon-to-be gaming studi0! 
+## Welcome to the website for my soon-to-be gaming studio! 
 I am currently using it as a portfolio.
 Link: http://fridaynightsoftwares.epizy.com/?i=1.
 Used web server: https://infinityfree.net/.
